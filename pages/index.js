@@ -19,7 +19,8 @@ export default function Home() {
       </Head>
 
       <Box className={styles.Box}>
-        <Button variant="text">Inicio</Button>
+        <Button sx={{right:"90%"}} variant="text">INICIO</Button>
+        <Button sx={{left:"80%"}} variant="outlined">DESCARGAR MI CV COMPLETO</Button>
         <Image src={"/Code.jpg"} width="100%" height={50} layout="responsive"/>
         <Avatar
         className={styles.Avatar}
