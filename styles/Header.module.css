@@ -1,0 +1,34 @@
+.Box{
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+.Image{
+    width: 100%;
+    height: 100%;    
+}
+
+.Box h1{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 500%;
+}
+
+.Box h2{
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 200%;
+    color: #BDBDBD;
+}
+
+.Avatar{
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
