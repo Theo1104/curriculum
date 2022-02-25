@@ -2,6 +2,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import styles from "../styles/Header.module.css"
 import Box from "@mui/material/Box"
+import Button from '@mui/material/Button';
 import Avatar from '@mui/material/Avatar';
 
 export default function Home() {
@@ -18,6 +19,7 @@ export default function Home() {
       </Head>
 
       <Box className={styles.Box}>
+        <Button variant="text">Inicio</Button>
         <Image src={"/Code.jpg"} width="100%" height={50} layout="responsive"/>
         <Avatar
         className={styles.Avatar}
