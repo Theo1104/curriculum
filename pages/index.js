@@ -1,5 +1,8 @@
 import Head from 'next/head'
 import Image from 'next/image'
+import styles from "../styles/Header.module.css"
+import Box from "@mui/material/Box"
+import Avatar from '@mui/material/Avatar';
 
 export default function Home() {
   return (
@@ -14,7 +17,17 @@ export default function Home() {
         />
       </Head>
 
-      <h1>Curriculum</h1>
+      <Box className={styles.Box}>
+        <Image src={"/Code.jpg"} width="100%" height={50} layout="responsive"/>
+        <Avatar
+        className={styles.Avatar}
+        alt="tururutu"
+        src="/2.jpg"
+        sx={{ width: 256, height: 256 }}
+        />
+        <h1>Heli Rosales</h1>
+        <h2>Programador Junior</h2>
+      </Box>
     </div>
   )
 }
