@@ -4,6 +4,7 @@ import styles from "../styles/Header.module.css"
 import Box from "@mui/material/Box"
 import Button from '@mui/material/Button';
 import Avatar from '@mui/material/Avatar';
+import { grey } from '@mui/material/colors';
 
 export default function Home() {
   return (
@@ -19,14 +20,17 @@ export default function Home() {
       </Head>
 
       <Box className={styles.Box}>
-        <Button sx={{right:"90%"}} variant="text">INICIO</Button>
-        <Button sx={{left:"80%"}} variant="outlined">DESCARGAR MI CV COMPLETO</Button>
+        <Button sx={{right:"90%"}} variant="text" size="large">INICIO</Button>
+        <Button sx={{left:"80%"}} variant="outlined" size="large">DESCARGAR MI CV COMPLETO</Button>
         <Image src={"/Code.jpg"} width="100%" height={50} layout="responsive"/>
         <Avatar
         className={styles.Avatar}
         alt="tururutu"
         src="/2.jpg"
-        sx={{ width: 256, height: 256 }}
+        sx={{ width: 286, height: 286 }}
+        style={{
+          border: '10px solid white'
+       }}
         />
         <h1>Heli Rosales</h1>
         <h2>Programador Junior</h2>
