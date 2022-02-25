@@ -25,8 +25,8 @@ export default function Home() {
         <Image src={"/Code.jpg"} width="100%" height={50} layout="responsive"/>
         <Avatar
         className={styles.Avatar}
-        alt="tururutu"
-        src="/2.jpg"
+        alt="Heli Rosales"
+        src="/Avatar.jpg"
         sx={{ width: 286, height: 286 }}
         style={{
           border: '10px solid white'
