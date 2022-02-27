@@ -7,29 +7,34 @@ import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import KeyboardArrowLeft from '@mui/icons-material/KeyboardArrowLeft';
 import KeyboardArrowRight from '@mui/icons-material/KeyboardArrowRight';
+import { VideogameAsset, Code, Park, Computer } from '@mui/icons-material';
 import SwipeableViews from 'react-swipeable-views';
 import { autoPlay } from 'react-swipeable-views-utils';
+import Grid from '@mui/material/Grid';
+import Container from '@mui/material/Container';
 
 const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 
 const images = [
   {
-    label: 'San Francisco – Oakland Bay Bridge, United States',
-    imgPath:
-      'https://images.unsplash.com/photo-1537944434965-cf4679d1a598?auto=format&fit=crop&w=400&h=250&q=60',
+    label: 'SOBRE MÍ',
+    paragraph:
+      'Mi nombre es Heli Rosales, tengo 18 años y soy programador junior, empece con la programación hace 5 años y desde entonces la he practicado dia a dia, puliendo mis habilidades en el area, domino en gran medida JavaScript, uso React-Native y Next JS de manera intermedia',
   },
   {
-    label: 'Bird',
+    label: 'EXPERIENCIA',
     imgPath:
       'https://images.unsplash.com/photo-1538032746644-0212e812a9e7?auto=format&fit=crop&w=400&h=250&q=60',
   },
   {
-    label: 'Bali, Indonesia',
-    imgPath:
-      'https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=400&h=250&q=80',
+    label: 'FORMACIÓN',
+    title: "Liceo Jose de San Martin",
+    paragraph:
+      'Soy graduado de bachillerato cientifico del año 2021',
   },
   {
-    label: 'Goč, Serbia',
+    label: 'AFICIONES / INTERESES',
+    icons: true,
     imgPath:
       'https://images.unsplash.com/photo-1512341689857-198e7e2f3ca8?auto=format&fit=crop&w=400&h=250&q=60',
   },
@@ -53,7 +58,7 @@ function Caraousel() {
   };
 
   return (
-    <Box sx={{ maxWidth: 400, flexGrow: 1 }}>
+    <Box sx={{maxWidth: "100%", flexGrow: 1, marginTop:"10%"}}>
       <Paper
         square
         elevation={0}
@@ -62,10 +67,9 @@ function Caraousel() {
           alignItems: 'center',
           height: 50,
           pl: 2,
-          bgcolor: 'background.default',
+          bgcolor: "lightgray",
         }}
       >
-        <Typography>{images[activeStep].label}</Typography>
       </Paper>
       <AutoPlaySwipeableViews
         axis={theme.direction === 'rtl' ? 'x-reverse' : 'x'}
@@ -76,23 +80,41 @@ function Caraousel() {
         {images.map((step, index) => (
           <div key={step.label}>
             {Math.abs(activeStep - index) <= 2 ? (
-              <Box
-                component="img"
-                sx={{
-                  height: 255,
-                  display: 'block',
-                  maxWidth: 400,
-                  overflow: 'hidden',
-                  width: '100%',
-                }}
-                src={step.imgPath}
-                alt={step.label}
-              />
+              <Container>
+                <Box sx={{bgcolor: "lightgray"}}>
+                    <h1>{step.label}</h1>
+                    {step.title ? (<Typography variant="h5" component="h2">{step.title}</Typography>) : null}
+                    {step. icons ?
+                    <Box>
+                      <Grid item xs={8}>
+                        <VideogameAsset fontSize='large' sx={{marginRight:10}}/>
+                        <Code fontSize='large'  sx={{marginX:10}}/> 
+                        <Computer fontSize='large'  sx={{marginX:10}}/> 
+                        <Park fontSize='large'  sx={{marginLeft:10}}/> 
+                        <Box sx={{float:"left", marginRight:10}}>
+                        <p>Videojuegos</p>
+                        </Box>
+                        <Box sx={{float:"left", marginX:2}}>
+                        <p>Programar</p>
+                        </Box>
+                        <Box sx={{float:"left", marginX:12}}>
+                        <p>Tecnologia</p>
+                        </Box>
+                        <Box sx={{float:"left", marginLeft:3}}>
+                        <p>Naturaleza</p>
+                        </Box>
+                      </Grid>
+                    </Box>
+                    : null}
+                    <p>{step.paragraph}</p>
+                  </Box>
+                </Container>
             ) : null}
           </div>
         ))}
       </AutoPlaySwipeableViews>
       <MobileStepper
+        sx={{bgcolor: "lightgray"}}
         steps={maxSteps}
         position="static"
         activeStep={activeStep}
