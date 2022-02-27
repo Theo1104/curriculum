@@ -4,7 +4,7 @@ import styles from "../styles/Header.module.css"
 import Box from "@mui/material/Box"
 import Button from '@mui/material/Button';
 import Avatar from '@mui/material/Avatar';
-import { grey } from '@mui/material/colors';
+import Caraousel from '../components/Caraousel';
 
 export default function Home() {
   return (
@@ -29,11 +29,14 @@ export default function Home() {
         src="/Avatar.jpg"
         sx={{ width: 286, height: 286 }}
         style={{
-          border: '10px solid white'
+          border: '10px solid lightgray'
        }}
         />
         <h1>Heli Rosales</h1>
         <h2>Programador Junior</h2>
+      </Box>
+      <Box>
+        <Caraousel/>
       </Box>
     </div>
   )
