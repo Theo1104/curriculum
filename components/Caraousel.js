@@ -7,10 +7,10 @@ import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import KeyboardArrowLeft from '@mui/icons-material/KeyboardArrowLeft';
 import KeyboardArrowRight from '@mui/icons-material/KeyboardArrowRight';
-import { VideogameAsset, Code, Park, Computer } from '@mui/icons-material';
+import Avatar from '@mui/material/Avatar';
 import SwipeableViews from 'react-swipeable-views';
 import { autoPlay } from 'react-swipeable-views-utils';
-import Grid from '@mui/material/Grid';
+import Stack from '@mui/material/Stack';
 import Container from '@mui/material/Container';
 
 const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
@@ -23,8 +23,8 @@ const images = [
   },
   {
     label: 'EXPERIENCIA',
-    imgPath:
-      'https://images.unsplash.com/photo-1538032746644-0212e812a9e7?auto=format&fit=crop&w=400&h=250&q=60',
+    paragraph:
+    'Tengo experiencia haciendo proyectos en React, utilizando Git y GitHub, Conocimientos basicos de Youtrack y haciendo proyectos en Unity3D, todo gracias a la dedicacion que le pongo a la programacion',
   },
   {
     label: 'FORMACIÓN',
@@ -58,7 +58,7 @@ function Caraousel() {
   };
 
   return (
-    <Box sx={{maxWidth: "100%", flexGrow: 1, marginTop:"10%"}}>
+    <Box sx={{maxWidth: "100%", flexGrow: 1, marginTop:15}}>
       <Paper
         square
         elevation={0}
@@ -82,31 +82,56 @@ function Caraousel() {
             {Math.abs(activeStep - index) <= 2 ? (
               <Container>
                 <Box sx={{bgcolor: "lightgray"}}>
+                <Stack
+                        alignItems="center"
+                      >
                     <h1>{step.label}</h1>
                     {step.title ? (<Typography variant="h5" component="h2">{step.title}</Typography>) : null}
                     {step. icons ?
                     <Box>
-                      <Grid item xs={8}>
-                        <VideogameAsset fontSize='large' sx={{marginRight:10}}/>
-                        <Code fontSize='large'  sx={{marginX:10}}/> 
-                        <Computer fontSize='large'  sx={{marginX:10}}/> 
-                        <Park fontSize='large'  sx={{marginLeft:10}}/> 
-                        <Box sx={{float:"left", marginRight:10}}>
-                        <p>Videojuegos</p>
-                        </Box>
-                        <Box sx={{float:"left", marginX:2}}>
-                        <p>Programar</p>
-                        </Box>
-                        <Box sx={{float:"left", marginX:12}}>
-                        <p>Tecnologia</p>
-                        </Box>
-                        <Box sx={{float:"left", marginLeft:3}}>
-                        <p>Naturaleza</p>
-                        </Box>
-                      </Grid>
+                      <Stack
+                        direction="row"
+                        justifyContent="center"
+                        alignItems="center"
+                        spacing={10}
+                      >
+                          <Avatar
+                            alt="Heli Rosales"
+                            src="/joystick.png"
+                            sx={{ width: 86, height: 86, background:"#94A7B1" ,":hover":{background: "#6F7F88"}}}
+                            />
+                          <Avatar
+                            alt="Heli Rosales"
+                            src="/code.png"
+                            sx={{ width: 86, height: 86,  background:"#94A7B1" ,":hover":{background: "#6F7F88"}}}
+                            />
+                          <Avatar
+                            alt="Heli Rosales"
+                            src="/cinema.png"
+                            sx={{ width: 86, height: 86,  background:"#94A7B1" ,":hover":{background: "#6F7F88"}}}
+                            />
+                          <Avatar
+                            alt="Heli Rosales"
+                            src="/park.png"
+                            sx={{ width: 86, height: 86,  background:"#94A7B1" ,":hover":{background: "#6F7F88"}}}
+                            />
+                      </Stack>
+                      <Stack
+                        direction="row"
+                        justifyContent="center"
+                        alignItems="center"
+                        spacing={8}
+                        sx={{marginTop:2}}
+                      >
+                        <Typography variant="p" component="h2" sx={{marginLeft:4}}>Juegos</Typography>
+                        <Typography variant="p" component="h2">Programar</Typography>
+                        <Typography variant="p" component="h2">Peliculas</Typography>
+                        <Typography variant="p" component="h2">Naturaleza</Typography>
+                      </Stack>
                     </Box>
                     : null}
                     <p>{step.paragraph}</p>
+                    </Stack>
                   </Box>
                 </Container>
             ) : null}
