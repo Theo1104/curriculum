@@ -7,6 +7,14 @@ import Avatar from '@mui/material/Avatar';
 import Caraousel from '../components/Caraousel';
 
 export default function Home() {
+
+  const handleTop = () =>{
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    })
+  }
+
   return (
     <div>
       <Head>
@@ -20,7 +28,7 @@ export default function Home() {
       </Head>
 
       <Box className={styles.Box}>
-        <Button sx={{right:"90%"}} variant="text" size="large">INICIO</Button>
+        <Button sx={{right:"90%"}} variant="text" size="large" onClick={handleTop}>INICIO</Button>
         <Button sx={{left:"80%"}} variant="outlined" size="large">DESCARGAR MI CV COMPLETO</Button>
         <Image src={"/Code.jpg"} width="100%" height={50} layout="responsive"/>
         <Avatar
