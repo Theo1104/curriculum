@@ -1,4 +1,5 @@
 import * as React from 'react';
+import Link from 'next/link'
 import { useTheme } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import MobileStepper from '@mui/material/MobileStepper';
@@ -18,25 +19,30 @@ const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 const images = [
   {
     label: 'SOBRE MÍ',
+    socialMedia: true,
+    icons: false,
     paragraph:
       'Mi nombre es Heli Rosales, tengo 18 años y soy programador junior, empece con la programación hace 5 años y desde entonces la he practicado dia a dia, puliendo mis habilidades en el area, domino en gran medida JavaScript, uso React-Native y Next JS de manera intermedia',
   },
   {
     label: 'EXPERIENCIA',
+    socialMedia: false,
+    icons: false,
     paragraph:
     'Tengo experiencia haciendo proyectos en React, utilizando Git y GitHub, Conocimientos basicos de Youtrack y haciendo proyectos en Unity3D, todo gracias a la dedicacion que le pongo a la programacion',
   },
   {
     label: 'FORMACIÓN',
     title: "Liceo Jose de San Martin",
+    socialMedia: false,
+    icons: false,
     paragraph:
       'Soy graduado de bachillerato cientifico del año 2021',
   },
   {
     label: 'AFICIONES / INTERESES',
     icons: true,
-    imgPath:
-      'https://images.unsplash.com/photo-1512341689857-198e7e2f3ca8?auto=format&fit=crop&w=400&h=250&q=60',
+    socialMedia: false,
   },
 ];
 
@@ -82,10 +88,44 @@ function Caraousel() {
             {Math.abs(activeStep - index) <= 2 ? (
               <Container>
                 <Box sx={{bgcolor: "lightgray"}}>
-                <Stack
+                  <Stack
+                          alignItems="center"
+                  >
+                    <Stack
+                        direction="row"
+                        justifyContent="center"
                         alignItems="center"
-                      >
-                    <h1>{step.label}</h1>
+                        spacing={10}
+                    >
+                      <h1>{step.label}</h1>
+                      {step.socialMedia ? (
+                        <>
+                        <a href="https://www.facebook.com/HeliRosalesVillanueva" target="_blank" rel="noreferrer noopener">
+                          <Avatar
+                          alt="Facebook"
+                          src="/facebook.png"
+                          sx={{ width: 36, height: 36, cursor:"pointer"}}
+                          />
+                        </a>
+                        <a href="https://www.instagram.com/heliarv_/?hl=es-la" target="_blank" rel="noreferrer noopener">
+                          <Avatar
+                          alt="Instagram"
+                          src="/instagram.png"
+                          sx={{ width: 36, height: 36, cursor:"pointer"}}
+                          />
+                        </a>
+                        <a href="https://twitter.com/theo_1104" target="_blank" rel="noreferrer noopener">
+                          <Avatar
+                          alt="Twitter"
+                          src="/twitter.png"
+                          sx={{ width: 36, height: 36, cursor:"pointer"}}
+                          />
+                        </a>
+                      </>
+                      ) : 
+                      <Button variant="outlined">DESCARGAR MI CV COMPLETO</Button>
+                      }
+                    </Stack>
                     {step.title ? (<Typography variant="h5" component="h2">{step.title}</Typography>) : null}
                     {step. icons ?
                     <Box>
@@ -96,22 +136,22 @@ function Caraousel() {
                         spacing={10}
                       >
                           <Avatar
-                            alt="Heli Rosales"
+                            alt="joystick"
                             src="/joystick.png"
                             sx={{ width: 86, height: 86, background:"#94A7B1" ,":hover":{background: "#6F7F88"}}}
                             />
                           <Avatar
-                            alt="Heli Rosales"
+                            alt="Code"
                             src="/code.png"
                             sx={{ width: 86, height: 86,  background:"#94A7B1" ,":hover":{background: "#6F7F88"}}}
                             />
                           <Avatar
-                            alt="Heli Rosales"
+                            alt="Cinema"
                             src="/cinema.png"
                             sx={{ width: 86, height: 86,  background:"#94A7B1" ,":hover":{background: "#6F7F88"}}}
                             />
                           <Avatar
-                            alt="Heli Rosales"
+                            alt="Park"
                             src="/park.png"
                             sx={{ width: 86, height: 86,  background:"#94A7B1" ,":hover":{background: "#6F7F88"}}}
                             />
