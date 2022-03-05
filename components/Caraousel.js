@@ -1,5 +1,4 @@
 import * as React from 'react';
-import Link from 'next/link'
 import { useTheme } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import MobileStepper from '@mui/material/MobileStepper';
@@ -22,7 +21,7 @@ const images = [
     socialMedia: true,
     icons: false,
     paragraph:
-      'Mi nombre es Heli Rosales, tengo 18 años y soy programador junior, empece con la programación hace 5 años y desde entonces la he practicado dia a dia, puliendo mis habilidades en el area, domino en gran medida JavaScript, uso React-Native y Next JS de manera intermedia',
+      'Mi nombre es Heli Rosales, tengo 18 años, soy programador junior, empece con la programación hace 5 años y desde entonces la he practicado dia a dia, puliendo mis habilidades en el area a medida que hacia proyectos para aprender y afinar mis capacidades',
   },
   {
     label: 'EXPERIENCIA',
