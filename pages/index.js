@@ -5,6 +5,7 @@ import Box from "@mui/material/Box"
 import Button from '@mui/material/Button';
 import Avatar from '@mui/material/Avatar';
 import Caraousel from '../components/Caraousel';
+import Aptitude from "../components/Aptitude"
 
 export default function Home() {
 
@@ -43,9 +44,8 @@ export default function Home() {
         <h1>Heli Rosales</h1>
         <h2>Programador Junior</h2>
       </Box>
-      <Box>
-        <Caraousel/>
-      </Box>
+      <Caraousel/>
+      <Aptitude/>
     </div>
   )
 }
