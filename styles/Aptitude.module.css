@@ -1,0 +1,54 @@
+.box1{
+    width: 10vw;
+    height: 10vw;
+    background-color: white;
+    z-index: 3;
+    position: absolute;
+    transform: translate(166%, -431%);
+
+}
+
+.box2{
+    width: 22vw;
+    height: 19.5vw;
+    background-color: white;
+    z-index: 3;
+    position: absolute;
+    transform: translate(74.8%, -174%);
+}
+
+.box3{
+    width: 15.94vw;
+    height: 14.49vw;
+    background-color: white;
+    z-index: 3;
+    position: absolute;
+    transform: translate(241%, -200%);
+}
+
+.box4{
+    width: 12.9vw;
+    height: 9.145vw;
+    background-color: #7bd03a;
+    z-index: 2;
+    position: absolute;
+    transform: translate(206.33%, -471.43%);
+}
+
+.box5{
+    width: 16vw;
+    height: 14.379vw;;
+    background-color: #7bd03a;
+    z-index: 2;
+    position: absolute;
+    transform: translate(241%, -299.6%);
+}
+
+.box6{
+    width: 32.1vw;
+    height: 28.75vw;
+    background-color: #7bd03a;
+    z-index: 2;
+    position: absolute;
+    transform: translate(169.5%, -150.1%);
+}
