@@ -15,7 +15,7 @@
     top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-size: 500%;
+    font-size: 6vw;
 }
 
 .Box h2{
@@ -23,7 +23,7 @@
     top: 55%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-size: 200%;
+    font-size: 3vw;
     color: #BDBDBD;
 }
 
