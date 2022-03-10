@@ -96,7 +96,7 @@ function Caraousel() {
                         alignItems="center"
                         spacing={10}
                     >
-                      <h1>{step.label}</h1>
+                      <Typography variant="h4" component="h3" sx={{fontSize: "2.5vw"}}>{step.label}</Typography>
                       {step.socialMedia ? (
                         <>
                         <a href="https://www.facebook.com/HeliRosalesVillanueva" target="_blank" rel="noreferrer noopener">
@@ -125,7 +125,7 @@ function Caraousel() {
                       <Button variant="outlined">DESCARGAR MI CV COMPLETO</Button>
                       }
                     </Stack>
-                    {step.title ? (<Typography variant="h5" component="h2">{step.title}</Typography>) : null}
+                    {step.title ? (<Typography variant="h5" component="h2" sx={{marginTop:2}}>{step.title}</Typography>) : null}
                     {step. icons ?
                     <Box>
                       <Stack
@@ -133,6 +133,7 @@ function Caraousel() {
                         justifyContent="center"
                         alignItems="center"
                         spacing={10}
+                        sx={{marginTop:2}}
                       >
                           <Avatar
                             alt="joystick"
@@ -162,14 +163,14 @@ function Caraousel() {
                         spacing={8}
                         sx={{marginTop:2}}
                       >
-                        <Typography variant="p" component="h2" sx={{marginLeft:4}}>Juegos</Typography>
-                        <Typography variant="p" component="h2">Programar</Typography>
-                        <Typography variant="p" component="h2">Peliculas</Typography>
-                        <Typography variant="p" component="h2">Naturaleza</Typography>
+                        <Typography variant="p" component="h2" sx={{marginLeft:4, fontSize: "1.8vw"}}>Juegos</Typography>
+                        <Typography variant="p" component="h2" sx={{fontSize: "1.8vw"}}>Programar</Typography>
+                        <Typography variant="p" component="h2" sx={{fontSize: "1.8vw"}}>Peliculas</Typography>
+                        <Typography variant="p" component="h2" sx={{fontSize: "1.8vw"}}>Naturaleza</Typography>
                       </Stack>
                     </Box>
                     : null}
-                    <p>{step.paragraph}</p>
+                    <Typography variant="body1" component="h3" sx={{marginTop:2}}>{step.paragraph}</Typography>
                     </Stack>
                   </Box>
                 </Container>
