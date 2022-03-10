@@ -42,7 +42,7 @@ export default function Home() {
        }}
         />
         <h1>Heli Rosales</h1>
-        <h2>Programador Junior</h2>
+        <h2>Frontend Developer</h2>
       </Box>
       <Caraousel/>
       <Aptitude/>
