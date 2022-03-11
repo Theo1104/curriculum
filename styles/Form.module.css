@@ -1,0 +1,8 @@
+.container{
+display: flex;
+color: white;
+}
+
+.container a{
+    color: lightblue;
+}
