@@ -103,21 +103,21 @@ function Caraousel() {
                           <Avatar
                           alt="Facebook"
                           src="/facebook.png"
-                          sx={{ width: 36, height: 36, cursor:"pointer"}}
+                          sx={{ width: 36, height: 36}}
                           />
                         </a>
                         <a href="https://www.instagram.com/heliarv_/?hl=es-la" target="_blank" rel="noreferrer noopener">
                           <Avatar
                           alt="Instagram"
                           src="/instagram.png"
-                          sx={{ width: 36, height: 36, cursor:"pointer"}}
+                          sx={{ width: 36, height: 36}}
                           />
                         </a>
                         <a href="https://twitter.com/theo_1104" target="_blank" rel="noreferrer noopener">
                           <Avatar
                           alt="Twitter"
                           src="/twitter.png"
-                          sx={{ width: 36, height: 36, cursor:"pointer"}}
+                          sx={{ width: 36, height: 36}}
                           />
                         </a>
                       </>
