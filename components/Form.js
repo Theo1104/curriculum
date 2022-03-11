@@ -6,7 +6,7 @@ import Typography from '@mui/material/Typography';
 const Form = () => {
   return (
     <div className={styles.container}>
-        <Box sx={{background:"#269037", width:"50%", height:"100vh"}}>
+        <Box sx={{background:"#0e5f2f", width:"50%", height:"100vh"}}>
             <Typography  variant="h3" sx={{marginLeft:"20%", marginTop:"10%"}}>INFO</Typography>
             <Typography  variant="h5" sx={{marginLeft:"20%", marginTop:"10%"}}>Telefono: 9 3724 4950</Typography>
             <Typography  variant="h5" sx={{marginLeft:"20%", marginTop:"10%"}}>E-mail: Helirosalesvillanueva@gmail.com</Typography>
