@@ -6,3 +6,12 @@ color: white;
 .container a{
     color: lightblue;
 }
+
+.Fields{
+    background-color: lightgray;
+    display: block;
+    margin-right: 10px;
+    width: 70%;
+    padding: 5px;
+    border-radius: 5px;
+}
