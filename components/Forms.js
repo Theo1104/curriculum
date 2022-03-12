@@ -77,6 +77,10 @@ const Forms = () => {
                                 className={styles.Fields}
                             />
                     </Box>
+                    <input 
+                    type="submit"
+                    className={styles.submit}
+                    />
                 </Form>
             </Formik>
         </Box>
