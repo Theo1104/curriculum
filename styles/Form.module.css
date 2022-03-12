@@ -15,3 +15,24 @@ color: white;
     padding: 5px;
     border-radius: 5px;
 }
+
+.submit{
+    margin-top: 3%;
+    width: 20%;
+    padding: 10px;
+    margin-left: 37%;
+    font-weight: bold;
+    border-radius: 5px;
+    text-transform: uppercase;
+    background-color: #269037;
+    color: white;
+    cursor:pointer;
+}
+
+.submit:hover{
+    background-color: #227245;
+}
+
+.submit:active{
+    background-color: #133f26;
+}
