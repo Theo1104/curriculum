@@ -36,24 +36,24 @@ const Forms = () => {
   return (
     <div className={styles.container}>
         <Box sx={{background:"#0e5f2f", width:"50%", height:"117vh"}}>
-            <Typography  variant="h3" sx={{marginLeft:"20%", marginTop:"10%"}}>INFO</Typography>
-            <Typography  variant="h5" sx={{marginLeft:"20%", marginTop:"10%"}}>Telefono: 9 3724 4950</Typography>
-            <Typography  variant="h5" sx={{marginLeft:"20%", marginTop:"10%"}}>E-mail: Helirosalesvillanueva@gmail.com</Typography>
-            <Typography  variant="h5" sx={{marginLeft:"20%", marginTop:"10%"}}>Linkedin: {""}
+            <Typography  variant="h3" sx={{marginLeft:"20%", marginTop:"10%", fontSize:"4vw"}}>INFO</Typography>
+            <Typography  variant="h5" sx={{marginLeft:"20%", marginTop:"10%", fontSize:"1.7vw"}}>Telefono: 9 3724 4950</Typography>
+            <Typography  variant="h5" sx={{marginLeft:"20%", marginTop:"10%", fontSize:"1.7vw"}}>E-mail: Helirosalesvillanueva@gmail.com</Typography>
+            <Typography  variant="h5" sx={{marginLeft:"20%", marginTop:"10%", fontSize:"1.7vw"}}>Linkedin: {""}
                 <a href="https://www.linkedin.com/in/heli-rosales-35014222b/" target="_blank" rel="noreferrer noopener">
                     https://www.linkedin.com/in/heli-rosales-35014222b/
                 </a>
             </Typography>
-            <Typography  variant="h5" sx={{marginLeft:"20%", marginTop:"10%"}}>GitHub: {""}
+            <Typography  variant="h5" sx={{marginLeft:"20%", marginTop:"10%", fontSize:"1.7vw"}}>GitHub: {""}
                 <a href="https://github.com/Theo1104?tab=repositories" target="_blank" rel="noreferrer noopener">
                     https://github.com/Theo1104?tab=repositories
                 </a>
             </Typography>
-            <Typography  variant="h5" sx={{marginLeft:"20%", marginTop:"10%", marginRight:"5%"}}>Dirección: Blanco Encalada 1723 Santiago Centro</Typography>
+            <Typography  variant="h5" sx={{marginLeft:"20%", marginTop:"10%", marginRight:"5%", fontSize:"1.7vw"}}>Dirección: Blanco Encalada 1723 Santiago Centro</Typography>
         </Box>
 
         <Box sx={{background:"#7bd03a", width:"50%", height:"117vh"}}>
-            <Typography  variant="h3" sx={{marginLeft:"5%", marginTop:"10%"}}>CONTACTO</Typography>
+            <Typography  variant="h3" sx={{marginLeft:"5%", marginTop:"10%", fontSize:"4vw"}}>CONTACTO</Typography>
             <Formik
                 initialValues={{
                     name: "",

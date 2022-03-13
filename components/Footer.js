@@ -5,39 +5,50 @@ import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import Grid from '@mui/material/Grid';
 import Avatar from '@mui/material/Avatar';
+import Stack from '@mui/material/Stack';
 
 const Footer = () => {
   return (
     <footer>
         <Box sx={{marginTop:"4%"}}>
-                <Grid container spacing={2}>
-                        <Button sx={{marginLeft:"20%", width:"30%"}} variant="outlined" size="large">DESCARGAR MI CV COMPLETO</Button>
+                <Stack
+                        direction="row"
+                        justifyContent="center"
+                        alignItems="center"
+                        spacing={5}
+                        sx={{marginTop:2}}>
+                        <Button sx={{marginRight: "10%",width:"30%"}} variant="outlined" size="large">DESCARGAR MI CV COMPLETO</Button>
                         <a href="https://www.facebook.com/HeliRosalesVillanueva" target="_blank" rel="noreferrer noopener">
                           <Avatar
                           alt="Facebook"
                           src="/facebook.png"
-                          sx={{ width: 36, height: 36, marginLeft: "550%"}}
+                          sx={{ width: 36, height: 36}}
                           />
                         </a>
                         <a href="https://www.instagram.com/heliarv_/?hl=es-la" target="_blank" rel="noreferrer noopener">
                           <Avatar
                           alt="Instagram"
                           src="/instagram.png"
-                          sx={{ width: 36, height: 36, marginLeft: "600%"}}
+                          sx={{ width: 36, height: 36}}
                           />
                         </a>
                         <a href="https://twitter.com/theo_1104" target="_blank" rel="noreferrer noopener">
                           <Avatar
                           alt="Twitter"
                           src="/twitter.png"
-                          sx={{ width: 36, height: 36, marginLeft: "650%"}}
+                          sx={{ width: 36, height: 36}}
                           />
                         </a>
-                </Grid>
-                <Grid container spacing={2} sx={{marginTop:"1%"}}>
-                    <Typography sx={{marginLeft:"28%"}} variant="body1" component="h3">© Creado por Heli Rosales</Typography>
-                    <Typography variant="body1" component="h3" sx={{marginLeft:"21%"}}>Sigueme en redes sociales</Typography>
-                </Grid>
+                </Stack>
+                <Stack
+                        direction="row"
+                        justifyContent="center"
+                        alignItems="center"
+                        spacing={17}
+                        sx={{marginTop:2}}>
+                    <Typography sx={{marginX:"9.5%"}} variant="body1" component="h3">© Creado por Heli Rosales</Typography>
+                    <Typography variant="body1" component="h3">Sigueme en redes sociales</Typography>
+                </Stack>
         </Box>
     </footer>
   )

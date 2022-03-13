@@ -32,13 +32,13 @@ export default function Home() {
 
       <Box className={styles.Box}>
         <Button sx={{right:"90%"}} variant="text" size="large" onClick={handleTop}>INICIO</Button>
-        <Button sx={{left:"80%"}} variant="outlined" size="large">DESCARGAR MI CV COMPLETO</Button>
-        <Image src={"/Code.jpg"} width="100%" height={50} layout="responsive"/>
+        <Button sx={{left:"80%",  width: "20%"}} variant="outlined" size="large">DESCARGAR MI CV COMPLETO</Button>
+        <Image src={"/Code.jpg"} width="1500%" height="800%"/>
         <Avatar
         className={styles.Avatar}
         alt="Heli Rosales"
         src="/Avatar.jpg"
-        sx={{ width: 286, height: 286 }}
+        sx={{ width: "21%", height: "40%" }}
         style={{
           border: '10px solid lightgray'
        }}

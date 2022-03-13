@@ -103,26 +103,26 @@ function Caraousel() {
                           <Avatar
                           alt="Facebook"
                           src="/facebook.png"
-                          sx={{ width: 36, height: 36}}
+                          sx={{ width: "3vw", height: "100%"}}
                           />
                         </a>
                         <a href="https://www.instagram.com/heliarv_/?hl=es-la" target="_blank" rel="noreferrer noopener">
                           <Avatar
                           alt="Instagram"
                           src="/instagram.png"
-                          sx={{ width: 36, height: 36}}
+                          sx={{ width: "3vw", height: "100%"}}
                           />
                         </a>
                         <a href="https://twitter.com/theo_1104" target="_blank" rel="noreferrer noopener">
                           <Avatar
                           alt="Twitter"
                           src="/twitter.png"
-                          sx={{ width: 36, height: 36}}
+                          sx={{ width: "3vw", height: "100%"}}
                           />
                         </a>
                       </>
                       ) : 
-                      <Button variant="outlined">DESCARGAR MI CV COMPLETO</Button>
+                      <Button sx={{fontSize: "1.2vw"}} variant="outlined">DESCARGAR MI CV COMPLETO</Button>
                       }
                     </Stack>
                     {step.title ? (<Typography variant="h5" component="h2" sx={{marginTop:2}}>{step.title}</Typography>) : null}
@@ -138,22 +138,22 @@ function Caraousel() {
                           <Avatar
                             alt="joystick"
                             src="/joystick.png"
-                            sx={{ width: 86, height: 86, background:"#94A7B1" ,":hover":{background: "#6F7F88"}}}
+                            sx={{ width: "7vw", height: "100%", background:"#94A7B1" ,":hover":{background: "#6F7F88"}}}
                             />
                           <Avatar
                             alt="Code"
                             src="/code.png"
-                            sx={{ width: 86, height: 86,  background:"#94A7B1" ,":hover":{background: "#6F7F88"}}}
+                            sx={{ width: "7vw", height: "100%",  background:"#94A7B1" ,":hover":{background: "#6F7F88"}}}
                             />
                           <Avatar
                             alt="Cinema"
                             src="/cinema.png"
-                            sx={{ width: 86, height: 86,  background:"#94A7B1" ,":hover":{background: "#6F7F88"}}}
+                            sx={{ width: "7vw", height: "100%",  background:"#94A7B1" ,":hover":{background: "#6F7F88"}}}
                             />
                           <Avatar
                             alt="Park"
                             src="/park.png"
-                            sx={{ width: 86, height: 86,  background:"#94A7B1" ,":hover":{background: "#6F7F88"}}}
+                            sx={{ width: "7vw", height: "100%",  background:"#94A7B1" ,":hover":{background: "#6F7F88"}}}
                             />
                       </Stack>
                       <Stack
@@ -170,7 +170,7 @@ function Caraousel() {
                       </Stack>
                     </Box>
                     : null}
-                    <Typography variant="body1" component="h3" sx={{marginTop:2}}>{step.paragraph}</Typography>
+                    <Typography variant="body1" component="h3" sx={{marginTop:2, fontSize: "1.2vw"}}>{step.paragraph}</Typography>
                     </Stack>
                   </Box>
                 </Container>
