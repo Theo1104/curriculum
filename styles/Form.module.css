@@ -16,6 +16,17 @@ color: white;
     border-radius: 5px;
 }
 
+.error{
+    text-align: center;
+    background-color: rgb(228, 0, 0);
+    width: 70%;
+    font-weight: bold;
+    padding: 3px;
+    text-transform: uppercase;
+    border-radius: 5px;
+    margin-top: 2px;
+}
+
 .submit{
     margin-top: 3%;
     width: 20%;
