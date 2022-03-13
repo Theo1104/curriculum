@@ -32,7 +32,7 @@ export default function Home() {
 
       <Box className={styles.Box}>
         <Button sx={{right:"88%", fontSize:"1.2vw"}} variant="text" size="large" onClick={handleTop}>INICIO</Button>
-        <Button sx={{left:"80%",  width: "20%"}} onClick={() => window.print()} variant="outlined" size="large">DESCARGAR MI CV COMPLETO</Button>
+        <a href="https://www.dropbox.com/s/soo9ipt9bye09gj/CV.pdf?dl=0" target="_blank" rel="noreferrer noopener"><Button sx={{left:"80%",  width: "20%"}} variant="outlined" size="large">DESCARGAR MI CV COMPLETO</Button></a>
         <Image src={"/Code.jpg"} width="1500%" height="800%"/>
         <Avatar
         className={styles.Avatar}

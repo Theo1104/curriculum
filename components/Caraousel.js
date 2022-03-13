@@ -122,7 +122,7 @@ function Caraousel() {
                         </a>
                       </>
                       ) : 
-                      <Button sx={{fontSize: "1.2vw"}} onClick={() => window.print()} variant="outlined">DESCARGAR MI CV COMPLETO</Button>
+                      <a href="https://www.dropbox.com/s/soo9ipt9bye09gj/CV.pdf?dl=0" target="_blank" rel="noreferrer noopener"><Button sx={{fontSize: "1.2vw"}} variant="outlined">DESCARGAR MI CV COMPLETO</Button></a>
                       }
                     </Stack>
                     {step.title ? (<Typography variant="h5" component="h2" sx={{marginTop:2}}>{step.title}</Typography>) : null}
