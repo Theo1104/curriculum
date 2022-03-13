@@ -15,7 +15,7 @@ import Container from '@mui/material/Container';
 
 const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 
-const images = [
+const information = [
   {
     label: 'SOBRE MÍ',
     socialMedia: true,
@@ -48,7 +48,7 @@ const images = [
 function Caraousel() {
   const theme = useTheme();
   const [activeStep, setActiveStep] = React.useState(0);
-  const maxSteps = images.length;
+  const maxSteps = information.length;
 
   const handleNext = () => {
     setActiveStep((prevActiveStep) => prevActiveStep + 1);
@@ -82,7 +82,7 @@ function Caraousel() {
         onChangeIndex={handleStepChange}
         enableMouseEvents
       >
-        {images.map((step, index) => (
+        {information.map((step, index) => (
           <div key={step.label}>
             {Math.abs(activeStep - index) <= 2 ? (
               <Container>
@@ -125,7 +125,7 @@ function Caraousel() {
                       <a href="https://www.dropbox.com/s/soo9ipt9bye09gj/CV.pdf?dl=0" target="_blank" rel="noreferrer noopener"><Button sx={{fontSize: "1.2vw"}} variant="outlined">DESCARGAR MI CV COMPLETO</Button></a>
                       }
                     </Stack>
-                    {step.title ? (<Typography variant="h5" component="h2" sx={{marginTop:2}}>{step.title}</Typography>) : null}
+                    {step.title ? (<Typography variant="h5" component="h2" sx={{marginTop:2, fontSize:"2.5vw"}}>{step.title}</Typography>) : null}
                     {step. icons ?
                     <Box>
                       <Stack
