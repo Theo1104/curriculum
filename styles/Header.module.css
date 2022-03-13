@@ -6,8 +6,8 @@
 
 .Box Button{
     color: white;
-    z-index:2;
-    position: fixed;
+    z-index:4;
+    position: fixed
 }
 
 .Box h1{
