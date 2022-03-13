@@ -16,7 +16,7 @@
     left: 50%;
     transform: translate(-50%, -50%);
     font-size: 6vw;
-    margin-bottom: auto;
+    margin-bottom: 3%;
 }
 
 .Box h2{
@@ -26,7 +26,7 @@
     transform: translate(-50%, -50%);
     font-size: 3vw;
     color: #BDBDBD;
-    margin-bottom: auto;
+    margin-bottom: 3%;
 }
 
 .Avatar{
