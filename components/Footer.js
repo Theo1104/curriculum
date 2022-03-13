@@ -17,7 +17,7 @@ const Footer = () => {
                         alignItems="center"
                         spacing={5}
                         sx={{marginTop:2}}>
-                        <Button sx={{marginRight: "10%",width:"30%"}} variant="outlined" size="large">DESCARGAR MI CV COMPLETO</Button>
+                        <Button sx={{marginRight: "10%",width:"30%"}} onClick={() => window.print()} variant="outlined" size="large">DESCARGAR MI CV COMPLETO</Button>
                         <a href="https://www.facebook.com/HeliRosalesVillanueva" target="_blank" rel="noreferrer noopener">
                           <Avatar
                           alt="Facebook"

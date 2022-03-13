@@ -122,7 +122,7 @@ function Caraousel() {
                         </a>
                       </>
                       ) : 
-                      <Button sx={{fontSize: "1.2vw"}} variant="outlined">DESCARGAR MI CV COMPLETO</Button>
+                      <Button sx={{fontSize: "1.2vw"}} onClick={() => window.print()} variant="outlined">DESCARGAR MI CV COMPLETO</Button>
                       }
                     </Stack>
                     {step.title ? (<Typography variant="h5" component="h2" sx={{marginTop:2}}>{step.title}</Typography>) : null}
