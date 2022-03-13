@@ -7,6 +7,7 @@ import Avatar from '@mui/material/Avatar';
 import Caraousel from '../components/Caraousel';
 import Aptitude from "../components/Aptitude"
 import Forms from '../components/Forms';
+import Footer from '../components/Footer';
 
 export default function Home() {
 
@@ -48,6 +49,7 @@ export default function Home() {
       <Caraousel/>
       <Aptitude/>
       <Forms/>
+      <Footer/>
     </div>
   )
 }
