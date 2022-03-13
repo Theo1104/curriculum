@@ -21,7 +21,7 @@ const images = [
     socialMedia: true,
     icons: false,
     paragraph:
-      'Mi nombre es Heli Rosales, tengo 18 años, soy programador junior, empece con la programación hace 5 años y desde entonces la he practicado dia a dia, puliendo mis habilidades en el area a medida que hacia proyectos para aprender y afinar mis capacidades',
+      'Mi nombre es Heli Rosales, tengo 18 años, soy Frontend Developer, empece con la programación hace 5 años y desde entonces la he practicado dia a dia, puliendo mis habilidades en el area a medida que hacia proyectos para aprender y afinar mis capacidades',
   },
   {
     label: 'EXPERIENCIA',
@@ -106,17 +106,17 @@ function Caraousel() {
                           sx={{ width: "3vw", height: "100%"}}
                           />
                         </a>
-                        <a href="https://www.instagram.com/heliarv_/?hl=es-la" target="_blank" rel="noreferrer noopener">
+                        <a href="https://www.linkedin.com/in/heli-rosales-35014222b/" target="_blank" rel="noreferrer noopener">
                           <Avatar
-                          alt="Instagram"
-                          src="/instagram.png"
+                          alt="Linkedin"
+                          src="/linkedin.png"
                           sx={{ width: "3vw", height: "100%"}}
                           />
                         </a>
-                        <a href="https://twitter.com/theo_1104" target="_blank" rel="noreferrer noopener">
+                        <a href="https://github.com/Theo1104?tab=repositories" target="_blank" rel="noreferrer noopener">
                           <Avatar
-                          alt="Twitter"
-                          src="/twitter.png"
+                          alt="GitHub"
+                          src="/github.png"
                           sx={{ width: "3vw", height: "100%"}}
                           />
                         </a>
