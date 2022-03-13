@@ -31,7 +31,7 @@ export default function Home() {
       </Head>
 
       <Box className={styles.Box}>
-        <Button sx={{right:"90%"}} variant="text" size="large" onClick={handleTop}>INICIO</Button>
+        <Button sx={{right:"88%", fontSize:"1.2vw"}} variant="text" size="large" onClick={handleTop}>INICIO</Button>
         <Button sx={{left:"80%",  width: "20%"}} onClick={() => window.print()} variant="outlined" size="large">DESCARGAR MI CV COMPLETO</Button>
         <Image src={"/Code.jpg"} width="1500%" height="800%"/>
         <Avatar
