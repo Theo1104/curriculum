@@ -2,6 +2,10 @@ CV HELI ROSALES
 
 Estas instrucciones te permitirán obtener una copia del proyecto en funcionamiento en tu máquina local para propósitos de desarrollo y pruebas.
 
+¿De que trata el proyecto?
+
+Este es mi curriculum virtual, hecho en Next js, muestra una pagina con mi información personal y laboral
+
 Pre-requisitos 📋
 
 Instalar el framework Material UI escribiendo en consola: npm install @mui/material @emotion/react @emotion/styled
