@@ -1,34 +1,25 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+CV HELI ROSALES
 
-## Getting Started
+Estas instrucciones te permitirán obtener una copia del proyecto en funcionamiento en tu máquina local para propósitos de desarrollo y pruebas.
 
-First, run the development server:
+Pre-requisitos 📋
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+Instalar el framework Material UI escribiendo en consola: npm install @mui/material @emotion/react @emotion/styled
+Instalar el componente react-swipeable-list escribiendo en consola: npm i react-swipeable-list
+Instalar Formik y Yup escribiendo en consola: npm i formik yup
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Despliegue 📦
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+Para desplegar el proyecto hay que escribir en consola: npm run dev. Y el servidor se montara en uno local
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+Construido con 🛠️
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+El proyecto se construyo con Next js, el framework de Material UI, la libreria de formularios de Formik, la validacion de Yup y CSS
 
-## Learn More
+Autores ✒️
 
-To learn more about Next.js, take a look at the following resources:
+Heli Rosales
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Licencia 📄
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+© TODOS LOS DERECHOS RESERVADOS
