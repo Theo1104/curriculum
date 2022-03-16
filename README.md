@@ -14,7 +14,7 @@ Instalar Formik y Yup escribiendo en consola: npm i formik yup
 
 Despliegue 📦
 
-Para desplegar el proyecto hay que escribir en consola: npm run dev. Y el servidor se montara en uno local
+Para desplegar el proyecto hay que escribir en consola: npm run dev. Y el proyecto se montara en un servidor local
 
 Construido con 🛠️
 
