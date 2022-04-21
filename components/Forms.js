@@ -1,160 +1,237 @@
-import React from 'react'
-import styles from "../styles/Form.module.css"
-import { Formik, Form, Field} from "formik"
-import * as Yup from "yup"
-import Box from "@mui/material/Box"
-import Typography from '@mui/material/Typography';
-import Grid from '@mui/material/Grid';
-import Alert from "./Alert"
+import React from "react";
+import styles from "../styles/Form.module.css";
+import { useFormik } from "formik";
+import {
+  Container,
+  TextField,
+  Grid,
+  Typography,
+  Box,
+  Button,
+  Link,
+} from "@mui/material";
+import * as Yup from "yup";
 
 const Forms = () => {
+  const formik = useFormik({
+    initialValues: {
+      firstName: "",
+      lastName: "",
+      email: "",
+      issues: "",
+      message: "",
+    },
+    validationSchema: Yup.object({
+      firstName: Yup.string()
+        .required("El Nombre es Obligatorio")
+        .min(3, "El nombre ingresado es muy corto.")
+        .max(10, "El nombre ingresado es muy largo."),
 
-    const schema = Yup.object().shape({
-        name: Yup.string()
-                            .min(3, "El nombre es muy corto")
-                            .max(10, "El nombre es muy largo")
-                            .required("El nombre es obligatorio"),
-        lastname: Yup.string()
-                            .min(3, "El apellido es muy corto")
-                            .max(10, "El apellido es muy largo")
-                            .required("El apellido es obligatorio"),
-        email:Yup.string()
-                            .email("El E-mail no es valido")
-                            .required("El nombre es obligatorio"),
-        phone: Yup.number()
-                            .positive("Número no valido")
-                            .integer("Número no valido")
-                            .typeError("Número no valido"),
-        business: Yup.string()
-                                .required("El asunto es obligatorio")
-    })
+      lastName: Yup.string()
+        .required("El Apellido es Obligatorio")
+        .min(3, "El Apellido ingresado es muy corto.")
+        .max(10, "El Apellido ingresado es muy largo."),
 
-    const handleSubmit = (values) =>{
+      email: Yup.string()
+        .required("Por favor introduzca su email para poder contactarlo")
+        .email("El email no es valido"),
 
-    }
+      issues: Yup.string()
+        .required("El Asunto es Obligatorio")
+        .min(10, "El asunto ingresado es muy corto.")
+        .max(30, "El asunto ingresado es muy largo."),
 
+      message: Yup.string()
+        .required("Debe dejarnos un mensaje con lo que desea")
+        .min(10, "El mensaje ingresado es muy corto.")
+        .max(150, "El mensaje ingresado es muy largo."),
+    }),
+    onSubmit: (values, helpers) => {
+      console.log(values);
+      helpers.resetForm();
+    },
+  });
   return (
-    <div className={styles.container}>
-        <Box sx={{background:"#0e5f2f", width:"50%", height:"117vh"}}>
-            <Typography  variant="h3" sx={{marginLeft:"20%", marginTop:"10%", fontSize:"4vw"}}>INFO</Typography>
-            <Typography  variant="h5" sx={{marginLeft:"20%", marginTop:"10%", fontSize:"1.7vw"}}>Telefono: 9 3724 4950</Typography>
-            <Typography  variant="h5" sx={{marginLeft:"20%", marginTop:"10%", fontSize:"1.7vw"}}>E-mail: Helirosalesvillanueva@gmail.com</Typography>
-            <Typography  variant="h5" sx={{marginLeft:"20%", marginTop:"10%", fontSize:"1.7vw"}}>Linkedin: {""}
-                <a href="https://www.linkedin.com/in/heli-rosales-35014222b/" target="_blank" rel="noreferrer noopener">
-                    https://www.linkedin.com/in/heli-rosales-35014222b/
-                </a>
-            </Typography>
-            <Typography  variant="h5" sx={{marginLeft:"20%", marginTop:"10%", fontSize:"1.7vw"}}>GitHub: {""}
-                <a href="https://github.com/Theo1104?tab=repositories" target="_blank" rel="noreferrer noopener">
-                    https://github.com/Theo1104?tab=repositories
-                </a>
-            </Typography>
-            <Typography  variant="h5" sx={{marginLeft:"20%", marginTop:"10%", marginRight:"5%", fontSize:"1.7vw"}}>Dirección: Blanco Encalada 1723 Santiago Centro</Typography>
-        </Box>
+    <Box className={styles.container}>
+      <Box sx={{ background: "#006b33", width: "50%", height: "110vh" }}>
+        <Typography
+          variant="h3"
+          sx={{ marginLeft: "20%", marginTop: "10%", fontSize: "4vw" }}
+        >
+          INFO
+        </Typography>
+        <Typography
+          variant="h5"
+          sx={{ marginLeft: "20%", marginTop: "5%", fontSize: "1.7vw" }}
+        >
+          Telefono: <Link href="tel:937244950">9 3724 4950</Link>
+        </Typography>
+        <Typography
+          variant="h5"
+          sx={{ marginLeft: "20%", marginTop: "5%", fontSize: "1.7vw" }}
+        >
+          E-mail:{" "}
+          <Link href="mailto:helirosalesvillanueva@gmail.com">
+            Helirosalesvillanueva@gmail.com
+          </Link>
+        </Typography>
+        <Typography
+          variant="h5"
+          sx={{ marginLeft: "20%", marginTop: "5%", fontSize: "1.7vw" }}
+        >
+          Linkedin: {""}
+          <Link
+            href="https://www.linkedin.com/in/heli-rosales-35014222b/"
+            target="_blank"
+            rel="noreferrer noopener"
+          >
+            https://www.linkedin.com/in/heli-rosales-35014222b/
+          </Link>
+        </Typography>
+        <Typography
+          variant="h5"
+          sx={{ marginLeft: "20%", marginTop: "5%", fontSize: "1.7vw" }}
+        >
+          GitHub: {""}
+          <Link
+            href="https://github.com/Theo1104?tab=repositories"
+            target="_blank"
+            rel="noreferrer noopener"
+          >
+            https://github.com/Theo1104?tab=repositories
+          </Link>
+        </Typography>
+        <Typography
+          variant="h5"
+          sx={{
+            marginLeft: "20%",
+            marginTop: "5%",
+            marginRight: "5%",
+            fontSize: "1.7vw",
+          }}
+        >
+          Dirección:{" "}
+          <Link
+            href="https://goo.gl/maps/EaejDguxpJfzCXDq6"
+            target="_blank"
+            rel="noreferrer noopener"
+          >
+            Blanco Encalada 1723 Santiago Centro
+          </Link>
+        </Typography>
+      </Box>
 
-        <Box sx={{background:"#7bd03a", width:"50%", height:"117vh"}}>
-            <Typography  variant="h3" sx={{marginLeft:"5%", marginTop:"10%", fontSize:"4vw"}}>CONTACTO</Typography>
-            <Formik
-                initialValues={{
-                    name: "",
-                    lastname:"",
-                    email:"",
-                    phone:"",
-                    business:"",
-                    message:""
-                }}
-                onSubmit={(values) => {
-                    handleSubmit(values)
-                }}
-                validationSchema={schema}
-            >
-                {({errors, touched}) => {
-                    return(
-                    <Form>
-                        <Box sx={{marginTop:"5%", marginLeft:"5%"}}>
-                            <Grid container spacing={2}>
-                                <Grid item xs={6}>
-                                    <label htmlFor='name'>Nombre *</label>
-                                    <Field 
-                                        type="text"
-                                        id="name"
-                                        className={styles.Fields}
-                                        name="name"
-                                    />
-                                    {errors.name && touched.name ? (
-                                        <Alert>{errors.name}</Alert>
-                                    ) : null}
-                                </Grid>
-                                <Grid item xs={6}>
-                                    <label htmlFor='lastname'>Apellido *</label>
-                                    <Field 
-                                        type="text"
-                                        id="lastname"
-                                        className={styles.Fields}
-                                        name="lastname"
-                                        />
-                                        {errors.lastname && touched.lastname ? (
-                                        <Alert>{errors.lastname}</Alert>
-                                    ) : null}
-                                </Grid>
-                            </Grid>
-                        </Box>
-                        <Box sx={{marginTop:"5%", marginLeft:"18%"}}>
-                            <label htmlFor='email'>E-mail *</label>
-                                <Field 
-                                    type="email"
-                                    id="email"
-                                    className={styles.Fields}
-                                    name="email"
-                                />
-                                {errors.email && touched.email ? (
-                                        <Alert>{errors.email}</Alert>
-                                    ) : null}
-                        </Box>
-                        <Box sx={{marginTop:"5%", marginLeft:"18%"}}>
-                            <label htmlFor='phone'>Telefono</label>
-                                <Field
-                                    type="tel"
-                                    id="phone"
-                                    className={styles.Fields}
-                                    name="phone"
-                                />
-                                {errors.phone && touched.phone ? (
-                                        <Alert>{errors.phone}</Alert>
-                                    ) : null}
-                        </Box>
-                        <Box sx={{marginTop:"5%", marginLeft:"18%"}}>
-                            <label htmlFor='business'>Asunto *</label>
-                                <Field 
-                                    type="text"
-                                    id="business"
-                                    className={styles.Fields}
-                                    name="business"
-                                />
-                                {errors.business && touched.business ? (
-                                        <Alert>{errors.business}</Alert>
-                                    ) : null}
-                        </Box>
-                        <Box sx={{marginTop:"5%", marginLeft:"18%"}}>
-                            <label htmlFor='message'>Mensaje</label>
-                                <Field
-                                    type="text"
-                                    as="textarea"
-                                    id="message"
-                                    className={styles.Fields}
-                                    name="message"
-                                />
-                        </Box>
-                        <input 
-                        type="submit"
-                        className={styles.submit}
-                        />
-                    </Form>
-                )}}
-            </Formik>
-        </Box>
-    </div>
-  )
-}
+      <Box sx={{ background: "#008745", width: "50%", height: "110vh" }}>
+        <form onSubmit={formik.handleSubmit}>
+          <Grid container spacing={2}>
+            <Box>
+              <Typography
+                variant="h3"
+                sx={{ marginLeft: "15%", marginTop: "26%", fontSize: "4vw" }}
+              >
+                CONTACTO
+              </Typography>
+            </Box>
+            <Container>
+              <Grid item columnSpacing={1}>
+                <Grid sx={{ display: "flex", gap: 4 }}>
+                  <Grid item xs={12} sm={6} md={6} lg={6} xl={6}>
+                    <TextField
+                      error={Boolean(
+                        formik.touched.firstName && formik.errors.firstName
+                      )}
+                      fullWidth
+                      helperText={
+                        formik.touched.firstName && formik.errors.firstName
+                      }
+                      label="Nombre"
+                      margin="normal"
+                      name="firstName"
+                      onBlur={formik.handleBlur}
+                      onChange={formik.handleChange}
+                      type="text"
+                      value={formik.values.firstName}
+                    />
+                  </Grid>
+                  <Grid item xs={12} sm={6} md={6} lg={6} xl={6}>
+                    <TextField
+                      error={Boolean(
+                        formik.touched.lastName && formik.errors.lastName
+                      )}
+                      fullWidth
+                      helperText={
+                        formik.touched.lastName && formik.errors.lastName
+                      }
+                      label="Apellido"
+                      margin="normal"
+                      name="lastName"
+                      onBlur={formik.handleBlur}
+                      onChange={formik.handleChange}
+                      type="text"
+                      value={formik.values.lastName}
+                    />
+                  </Grid>
+                </Grid>
+                <Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
+                  <TextField
+                    error={Boolean(formik.touched.email && formik.errors.email)}
+                    fullWidth
+                    helperText={formik.touched.email && formik.errors.email}
+                    label="Email"
+                    margin="normal"
+                    name="email"
+                    onBlur={formik.handleBlur}
+                    onChange={formik.handleChange}
+                    type="email"
+                    value={formik.values.email}
+                  />
+                </Grid>
+                <Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
+                  <TextField
+                    error={Boolean(
+                      formik.touched.issues && formik.errors.issues
+                    )}
+                    fullWidth
+                    helperText={formik.touched.issues && formik.errors.issues}
+                    label="Asunto"
+                    margin="normal"
+                    name="issues"
+                    onBlur={formik.handleBlur}
+                    onChange={formik.handleChange}
+                    type="text"
+                    value={formik.values.issues}
+                  />
+                </Grid>
+                <Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
+                  <TextField
+                    error={Boolean(
+                      formik.touched.message && formik.errors.message
+                    )}
+                    fullWidth
+                    multiline
+                    rows={3}
+                    helperText={formik.touched.message && formik.errors.message}
+                    label="Mensaje"
+                    margin="normal"
+                    name="message"
+                    onBlur={formik.handleBlur}
+                    onChange={formik.handleChange}
+                    type="text"
+                    value={formik.values.message}
+                  />
+                </Grid>
+              </Grid>
+            </Container>
+          </Grid>
+          <Box>
+            <Button className={styles.submit} type="submit">
+              Enviar
+            </Button>
+          </Box>
+        </form>
+      </Box>
+    </Box>
+  );
+};
 
-export default Forms
+export default Forms;
