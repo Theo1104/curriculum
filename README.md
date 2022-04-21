@@ -8,9 +8,7 @@ Este es mi curriculum virtual, hecho en Next js, muestra una pagina con mi infor
 
 Pre-requisitos 📋
 
-Instalar el framework Material UI escribiendo en consola: npm install @mui/material @emotion/react @emotion/styled
-Instalar el componente react-swipeable-list escribiendo en consola: npm i react-swipeable-list
-Instalar Formik y Yup escribiendo en consola: npm i formik yup
+Clonar el Repositorio y usar "npm install" para instalar el proyecto
 
 Despliegue 📦
 
