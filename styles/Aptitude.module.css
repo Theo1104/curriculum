@@ -13,7 +13,7 @@
     background-color: white;
     z-index: 3;
     position: absolute;
-    transform: translate(74.8%, -174%);
+    transform: translate(75.5%, -174.5%);
 }
 
 .box3{
@@ -28,7 +28,7 @@
 .box4{
     width: 12.9vw;
     height: 9.145vw;
-    background-color: #7bd03a;
+    background-color: #008745;
     z-index: 2;
     position: absolute;
     transform: translate(206.33%, -471.43%);
@@ -36,8 +36,8 @@
 
 .box5{
     width: 16vw;
-    height: 14.379vw;;
-    background-color: #7bd03a;
+    height: 14.379vw;
+    background-color: #008745;
     z-index: 2;
     position: absolute;
     transform: translate(241%, -299.6%);
@@ -46,7 +46,7 @@
 .box6{
     width: 32.1vw;
     height: 28.75vw;
-    background-color: #7bd03a;
+    background-color: #008745;
     z-index: 2;
     position: absolute;
     transform: translate(169.5%, -150.1%);
