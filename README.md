@@ -8,7 +8,9 @@ Este es mi curriculum virtual, hecho en Next js, muestra una pagina con mi infor
 
 Pre-requisitos 📋
 
-Clonar el Repositorio y usar "npm install" para instalar el proyecto
+Clonar el Repositorio con: git clone https://github.com/Theo1104/curriculum.git
+
+Instalar los paquetes del proyecto con "npm install"
 
 Despliegue 📦
 
